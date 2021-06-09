@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RaizenTestFuncional</name>
+    </assembly>
+    <members>
+        <member name="T:RaizenTestFuncional.Browser">
+            <summary>
+            Browsers suportados.
+            </summary>
+        </member>
+        <member name="T:RaizenTestFuncional.IWebElementExtensions">
+            <summary>
+            Métodos de ações com a interface web.
+            </summary>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.SetDriver(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Configura uma instância do Webdriver para realizar as ações na interface.
+            </summary>
+            <param name="_driver">Driver responsável pela interação do Selenium com a interface web.</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.AccessUrl">
+            <summary>
+            AccessUrl: Acessa a Url definida em specflow.json - parâmetro [Url]
+            </summary>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.GoToPage(System.String)">
+            <summary>
+            GoToPage: permite navegar para uma página Web. Considera a URL definida em "specflow.json" e concatena com a página Web informada 
+            </summary>
+            <param name="urlpage"> Página Web que será acessada</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.Click(OpenQA.Selenium.IWebElement)">
+            <summary>
+            Click: permite clicar em um WebElement que permite esta ação.
+            </summary>
+            <param name="element">WebElement que deverá sofrer a ação do clique.</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.CheckClikable(OpenQA.Selenium.IWebElement)">
+            <summary>
+            Verifica se o elemento é clicável.
+            </summary>
+            <param name="element">WebElement a ser verificado</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.UntilClikable(OpenQA.Selenium.IWebElement)">
+            <summary>
+            Aguarda até que um elemento seja clicável.
+            </summary>
+            <param name="element">WebElement a ser aguardado.</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.CheckExist(OpenQA.Selenium.IWebElement)">
+            <summary>
+            Verifica a existência de um WebElement.
+            </summary>
+            <param name="element"> WebElement que deverá estar sendo exibido na interface</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.UntilVisible(OpenQA.Selenium.IWebElement)">
+            <summary>
+            Aguarda até que o WebElement desejado esteja visível
+            </summary>
+            <param name="element">WebElement a ser visualizado.</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.UntilInvisible(OpenQA.Selenium.IWebElement)">
+            <summary>
+            Aguarda até que o WebElement esteja invisível.
+            </summary>
+            <param name="element">WebElement que aguarda desaparecer da interface.</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.GetText(OpenQA.Selenium.IWebElement)">
+            <summary>
+            Recupera o texto de um elemento WebElement.
+            </summary>
+            <param name="element">WebElement que deseja recuperar o valor exibido.</param>
+            <returns></returns>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.GetProperty(OpenQA.Selenium.IWebElement,System.String)">
+            <summary>
+            Recupera o valor de uma propridade do WebElement.
+            </summary>
+            <param name="element">WebElement que deseja-se recuperar um valor.</param>
+            <param name="property"> Propriedade do WebElement que retornará o valor.</param>
+            <returns></returns>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.SetText(OpenQA.Selenium.IWebElement,System.String)">
+            <summary>
+            Setar um WebElement do tipo input "Text" com um valor.
+            </summary>
+            <param name="element">WebElement que receberá o valor.</param>
+            <param name="text">Valor a ser setado.</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.SelectDropDownValue(OpenQA.Selenium.IWebElement,System.String)">
+            <summary>
+            Selecionar um valor em um Select (Combobox).
+            </summary>
+            <param name="dropdown">WebElement do tipo Select (Combobox).</param>
+            <param name="value">Valor a se selecionado.</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.SelectDropDownText(OpenQA.Selenium.IWebElement,System.String)">
+            <summary>
+            Selecionar um valor pelo texto em um Select (Combobox).
+            </summary>
+            <param name="dropdown">WebElement do Select (Combobox) desejado.</param>
+            <param name="text">Texto a ser selecionado.</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.SelectDropDownIndex(OpenQA.Selenium.IWebElement,System.Int32)">
+            <summary>
+            Selecionar um valor pelo indíce em um Select (Combobox).
+            </summary>
+            <param name="dropdown">WebElement do tipo Select (Combobox).</param>
+            <param name="index">Indíce que será selecionado</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.SelectDropDownGetValueFromSelectedOption(OpenQA.Selenium.IWebElement)">
+            <summary>
+            Recuperar um valor pelo option selecionado de um Select(Combobox).
+            </summary>
+            <param name="dropdown">WebElement do tipo Select(Combobox).</param>
+            <returns></returns>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.SelectRadioOrCheckbox(OpenQA.Selenium.IWebElement)">
+            <summary>
+            Setar um Checkbox ou Radio Button.
+            </summary>
+            <param name="element">WebElement que deverá selecionado.</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.SelectRadiosOrCheckboxes(System.Collections.Generic.ICollection{OpenQA.Selenium.IWebElement})">
+            <summary>
+            Selecionar vários Checkboxes ou Radios Buttons.
+            </summary>
+            <param name="elements"> ICollection de WebElements que deverão ser selecionados.</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.FileUpload(OpenQA.Selenium.IWebElement,System.String)">
+            <summary>
+            Upload de arquivos.
+            </summary>
+            <param name="element"> WebElement do tipo input "File".</param>
+            <param name="filePath"> Caminho do arquivo.</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.FileUpload(OpenQA.Selenium.IWebElement,System.String,System.String)">
+            <summary>
+            Upload de arquivos por classe Robot. Simula comandos manuais para execução do upload.
+            </summary>
+            <param name="element"> WebElement do tipo input "File"</param>
+            <param name="titleUploadWindow">Título da janela de upload (janela de upload Windows)</param>
+            <param name="filePath"> Caminho do arquivo</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.Submit(OpenQA.Selenium.IWebElement)">
+            <summary>
+            Submeter um formulário
+            </summary>
+            <param name="element">WebElement do tipo "Form"</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.GetValuesOnTable(System.Collections.Generic.ICollection{OpenQA.Selenium.IWebElement})">
+            <summary>
+            Recupera os valores de uma tabela.
+            </summary>
+            <param name="table">WebElement do tipo "Table"</param>
+            <returns></returns>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.SelectValueOnTable(System.Collections.Generic.ICollection{OpenQA.Selenium.IWebElement},System.String)">
+            <summary>
+            Selecionar um valor em uma tabela.
+            </summary>
+            <param name="table">WebElement do tipo "Table"</param>
+            <param name="value">Valor a ser selecionado</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.Wait(System.Int32)">
+            <summary>
+            Realiza um tempo de espera na execução no teste.
+            </summary>
+            <param name="seconds">Aguarda em segundos</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.ClickJs(OpenQA.Selenium.IWebElement)">
+            <summary>
+            Realiza o click em um WebElement via Javascript
+            </summary>
+            <param name="element"> WebElement que permite clique</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.SetTextJs(OpenQA.Selenium.IWebElement,System.String)">
+            <summary>
+            Setar um texto em um input "Text" via Javascript
+            </summary>
+            <param name="element">WebElement do tipo input "Text"</param>
+            <param name="value">Valor a ser setado</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.ExecuteJsCommand(OpenQA.Selenium.IWebElement,System.String)">
+            <summary>
+            Executa um comando via Javascript
+            </summary>
+            <param name="element">WebElement que receberá a ação</param>
+            <param name="commandJS">Comando em Javascript</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.MoveToElement(OpenQA.Selenium.IWebElement)">
+            <summary>
+            Permite encontrar e mover até um WebElement
+            </summary>
+            <param name="element">WebElement a ser encontrado.</param>
+            <returns></returns>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.ScrollIntoView(System.String)">
+            <summary>
+            Permite realiza o scroll na interface
+            </summary>
+            <param name="position">Sentido do Scroll: top ou bottom</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.SelectElementFromList(System.Collections.Generic.ICollection{OpenQA.Selenium.IWebElement},System.String)">
+            <summary>
+            Seleciona um elemento em uma lista
+            </summary>
+            <param name="list">Lista de itens do tipo tag: UL (informar CssSelector do WebElement)</param>
+            <param name="findValue">Valor a ser selecionado na lista</param>
+        </member>
+        <member name="M:RaizenTestFuncional.IWebElementExtensions.FindElementFromList(System.Collections.Generic.ICollection{OpenQA.Selenium.IWebElement},System.String)">
+            <summary>
+            Retorna um valor encontrado em uma lista
+            </summary>
+            <param name="list">Lista de itens do tipo tag: UL (informar CssSelector do WebElement)</param>
+            <param name="findValue">Valor a ser selecionado na lista</param>
+            <returns></returns>
+        </member>
+        <member name="T:RaizenTestFuncional.WebDriverFactory">
+            <summary>
+            Gerenciamento do webdriver
+            </summary>
+        </member>
+        <member name="M:RaizenTestFuncional.WebDriverFactory.Enviroment">
+            <summary>
+            Configurações das informações necessárias para execução no Jenkins
+            </summary>
+        </member>
+        <member name="M:RaizenTestFuncional.WebDriverFactory.CreateWebDriver">
+            <summary>
+            CreateWebDriver: cria uma instância do Webdriver para execução dos testes.
+            Recupera todas as informações do arquivo "specflow.json" e configura o webdriver para execução.
+            </summary>
+        </member>
+        <member name="M:RaizenTestFuncional.WebDriverFactory.GetDriver">
+            <summary>
+            Recupera o driver instanciado.
+            Permite acessar as configurações e ações do webdriver.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RaizenTestFuncional.WebDriverFactory.GetUrl">
+            <summary>
+            Recupera a URL configurada no specflow.json pelo parâmetro "appSettings:Url".
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RaizenTestFuncional.WebDriverFactory.GetTimeOut">
+            <summary>
+            Recupera o valor de timeout configurado no specflow.json pelo parâmetro "appSettings:TimeOut".
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RaizenTestFuncional.WebDriverFactory.GetBrowser">
+            <summary>
+            Recupera o browser configurado no specflow.json para execução dos testes pelo parâmetro "appSettings:Browser".
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RaizenTestFuncional.WebDriverFactory.CloseTest">
+            <summary>
+            Fecha a janela de execução dos teste atual.
+            </summary>
+        </member>
+        <member name="M:RaizenTestFuncional.WebDriverFactory.QuitDriver">
+            <summary>
+            Finaliza o processo do Webdriver.
+            </summary>
+        </member>
+    </members>
+</doc>
