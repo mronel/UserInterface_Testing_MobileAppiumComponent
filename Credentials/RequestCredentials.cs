@@ -11,7 +11,7 @@ namespace RaizenTestFuncional.Credentials
         /// <summary>
         /// Url de consulta ao Cofre de Senhas
         /// </summary>
-        public const string urlSafeCredentials = "https://secpwd1.minhati.com.br/iso/coe/senha/";
+        public const string urlSafeCredentials = "";
 
         /// <summary>
         /// Permite consulta o Cofre de Senhas e obter os dados do(s) usuário(s) informados
